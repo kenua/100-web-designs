@@ -1,9 +1,68 @@
-.fs-1 {
-   font-size: 16px;
-}
+.c-dark { color: var(--dark); }
+.fs-1 { font-size: 16px; }
+.fw-1 { font-weight: 100; }
+.fw-2 { font-weight: 200; }
+.fw-3 { font-weight: 300; }
+.fw-4 { font-weight: 400; }
+.fw-5 { font-weight: 500; }
+.fw-6 { font-weight: 600; }
+.fw-7 { font-weight: 700; }
+.fw-8 { font-weight: 800; }
+.fw-9 { font-weight: 900; }
 .anchor {
    transition: color 250ms ease-in-out;
 }
 .anchor:hover {
    color: var(--orange);
+}
+.btn {
+   font-weight: 500;
+   background-color: var(--orange);
+   color: var(--white);
+   padding: 10px 20px;
+   border-radius: 5px;
+   transition: background-color 100ms ease-out,
+               border-color 100ms ease-out;
+   cursor: pointer;
+}
+.btn:hover {
+   background-color: var(--dark-orange);  
+}
+.btn--ghost {
+   background-color: var(--white);
+   color: var(--orange);
+   border: 1px solid var(--orange);
+}
+.btn--ghost:hover {
+   background-color: var(--orange);
+   color: var(--white);
+}
+.image-container {
+   width: 349px;
+   height: 380px;
+   position: relative;
+}
+.image-container__back-layer {
+   background-color: var(--orange-light);
+   border-radius: 5px;
+   width: 349px;
+   height: 380px;
+   position: absolute;
+   top: -24px;
+   left: -34px;
+   z-index: 1;
+}
+.image-container__image {
+   background-color: var(--orange);
+   background-image: url('../../assets/images/balihani/gallery.svg');
+   background-size: 164px;
+   background-position: center;
+   background-repeat: no-repeat;
+   border-radius: 5px;
+   width: 349px;
+   height: 380px;
+   position: absolute;
+   top: 24px;
+   left: 34px;
+   z-index: 2;
 }

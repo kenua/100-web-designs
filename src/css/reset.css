@@ -24,6 +24,7 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
+	font-weight: 400;
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -55,10 +56,14 @@ table {
 }
 input, button {
 	font-size: inherit;
+	font-family: inherit;
    display: block;
    border: none;
    background-color: transparent;
 	padding: 0;
+}
+p button {
+	display: inline-block;
 }
 a {
 	text-decoration: none;
