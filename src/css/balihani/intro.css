@@ -1,14 +1,15 @@
 .intro {
+	overflow: hidden;
 	padding-top: 182px;
 }
 .intro-desc {
-	max-width: 1174px;
-	margin: 0 auto;
 	display: flex;
-	justify-content: space-between;
+	flex-direction: column;
 }
 .intro-desc__left-side {
-	max-width: 534px;
+	order: 2;
+	position: relative;
+	padding-left: 16px;
 }
 .intro__heading {
 	color: var(--orange);
@@ -40,14 +41,30 @@
 .intro .btn--ghost {
 	margin-left: 30px;
 }
+.intro-desc__right-side {
+	order: 1;
+	flex-grow: 1;
+	position: relative;
+	top: -50px;
+	z-index: -1;
+}
+.intro-image-container {
+	margin-left: auto;
+}
 .intro-handyman {
 	background-color: rgba(239, 121, 12, 0.08);
-	width: 811px;
+	width: 100%;
+	max-width: 811px;
 	margin: 70px auto 0;
 	border-radius: 5px;
-	padding: 30px 50px;
+	padding: 30px 30px;
 	display: flex;
+	flex-direction: column;
 	align-items: center;
+	justify-content: center;
+}
+.intro-handyman__left-side {
+	width: 100%;
 }
 .intro-handyman__heading {
 	font-size: 2rem;
@@ -57,20 +74,22 @@
 	display: flex;
 }
 .intro-handyman__option-item {
+	--pad: 12px;
 	border-right: 1px solid #486284;
+	flex-grow: 1;
 }
 .intro-handyman__option-item:last-child {
 	border: none;
 }
 .intro-handyman__option-item:nth-child(1) {
-	padding-right: 24px;
+	padding-right: var(--pad);
 }
 .intro-handyman__option-item:nth-child(2) {
-	padding-right: 24px;
-	padding-left: 24px;
+	padding-right: var(--pad);
+	padding-left: var(--pad);
 }
 .intro-handyman__option-item:nth-child(3) {
-	padding-left: 24px;
+	padding-left: var(--pad);
 }
 .intro-handyman__option-heading {
 	margin-top: 4px;
@@ -80,8 +99,40 @@
 	margin-top: 16px;
 }
 .intro-handyman__right-side {
-	margin-left: auto;
+	margin-top: 32px;
 }
 .intro-handyman__btn img {
 	vertical-align: top;
+}
+
+@media screen and (min-width: 900px) {
+	.intro-desc {
+		max-width: 1174px;
+		margin: 0 auto;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	.intro-desc__left-side {
+		order: 1;
+		max-width: 534px;
+	}
+	.intro-desc__right-side {
+		order: 2;
+		top: 0px;
+		z-index: 1;
+	}
+	.intro-handyman {
+		padding: 30px 50px;
+		align-items: center;
+		flex-direction: row;
+	}
+	.intro-handyman__right-side {
+		flex-shrink: 0;
+		margin-top: 0;
+		margin-left: auto;
+	}
+	.intro-handyman__option-item {
+		--pad: 24px;
+		flex-grow: 0;
+	}
 }
