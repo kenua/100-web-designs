@@ -1,6 +1,7 @@
 .intro {
 	overflow: hidden;
 	padding-top: 182px;
+	position: relative;
 }
 .intro-desc {
 	display: flex;
@@ -55,13 +56,14 @@
 	background-color: rgba(239, 121, 12, 0.08);
 	width: 100%;
 	max-width: 811px;
-	margin: 70px auto 0;
+	margin: 70px auto 95px;
 	border-radius: 5px;
 	padding: 30px 30px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	position: relative;
 }
 .intro-handyman__left-side {
 	width: 100%;
@@ -103,6 +105,15 @@
 }
 .intro-handyman__btn img {
 	vertical-align: top;
+}
+.intro__radial-1 {
+	top: -300px;
+	right: -300px;
+}
+.intro__radial-2 {
+	top: 50%;
+	left: -700px;
+	transform: translateY(-50%);
 }
 
 @media screen and (min-width: 900px) {

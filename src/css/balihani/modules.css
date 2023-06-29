@@ -69,3 +69,27 @@
    left: 34px;
    z-index: 2;
 }
+.image-container__svg {
+   position: absolute;
+}
+.image-container__arrow {
+   width: 100px;
+   top: -38px;
+   right: -24px;
+}
+.image-container__thunder {
+   width: 71px;
+   bottom: -24px;
+   left: -40px;
+}
+.bg-radial {
+   /*background-image: radial-gradient(var(--orange), #00000000);*/
+   background-image: 
+      radial-gradient(closest-side at center, 
+      var(--orange-light), 
+      #00000000);
+   width: 800px;
+   height: 800px;
+   position: absolute;
+   z-index: -1;
+}
