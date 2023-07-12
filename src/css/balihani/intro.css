@@ -39,8 +39,13 @@
 	margin: 35px 0;
 	line-height: 1.6;
 }
+.intro__buttons-container .btn {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
 .intro .btn--ghost {
-	margin-left: 30px;
+	margin-top: 16px;
 }
 .intro-desc__right-side {
 	order: 1;
@@ -74,24 +79,13 @@
 }
 .intro-handyman__options {
 	display: flex;
+	flex-direction: column;
 }
 .intro-handyman__option-item {
-	--pad: 12px;
-	border-right: 1px solid #486284;
 	flex-grow: 1;
-}
-.intro-handyman__option-item:last-child {
-	border: none;
-}
-.intro-handyman__option-item:nth-child(1) {
-	padding-right: var(--pad);
-}
-.intro-handyman__option-item:nth-child(2) {
-	padding-right: var(--pad);
-	padding-left: var(--pad);
-}
-.intro-handyman__option-item:nth-child(3) {
-	padding-left: var(--pad);
+	padding-bottom: 12px;
+	margin-bottom: 24px;
+	border-bottom: 1px solid #486284;
 }
 .intro-handyman__option-heading {
 	margin-top: 4px;
@@ -104,7 +98,9 @@
 	margin-top: 32px;
 }
 .intro-handyman__btn img {
-	vertical-align: top;
+	margin-right: 8px;
+	position: relative;
+	top: 3px;
 }
 .intro__radial-1 {
 	top: -300px;
@@ -127,6 +123,15 @@
 		order: 1;
 		max-width: 534px;
 	}
+	.intro__buttons-container .btn {
+		display: inline-block;
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.intro .btn--ghost {
+		margin-top: 0;
+		margin-left: 30px;
+	}
 	.intro-desc__right-side {
 		order: 2;
 		top: 0px;
@@ -136,6 +141,33 @@
 		padding: 30px 50px;
 		align-items: center;
 		flex-direction: row;
+	}
+	.intro-handyman__options {
+		flex-direction: row;
+	}
+	.intro-handyman__option-item {
+		--pad: 12px;
+
+		border-right: 1px solid #486284;
+		padding-bottom: 0;
+		margin-bottom: 0;
+		border-bottom: none;
+	}
+	.intro-handyman__option-item:last-child {
+		border: none;
+	}
+	.intro-handyman__option-item:last-child {
+		border: none;
+	}
+	.intro-handyman__option-item:nth-child(1) {
+		padding-right: var(--pad);
+	}
+	.intro-handyman__option-item:nth-child(2) {
+		padding-right: var(--pad);
+		padding-left: var(--pad);
+	}
+	.intro-handyman__option-item:nth-child(3) {
+		padding-left: var(--pad);
 	}
 	.intro-handyman__right-side {
 		flex-shrink: 0;
