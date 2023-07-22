@@ -51,6 +51,15 @@
    background-color: var(--orange);
    color: var(--white);
 }
+.btn--ghost-grey {
+   background-color: transparent;
+   color: #666;
+   border: 1px solid #CCC;
+}
+.btn--ghost-grey:hover {
+   background-color: transparent;
+   border-color: var(--orange);
+}
 .image-container {
    width: 100%;
    max-width: 349px;
