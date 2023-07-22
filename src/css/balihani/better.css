@@ -1,0 +1,40 @@
+.better-grid {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 66px;
+}
+.better-subgrid {
+    display: grid;
+    column-gap: 50px;
+    row-gap: 50px;
+}
+@media screen and (min-width: 900px) {
+    .card--left-icon {
+       text-align: left;
+       display: flex;
+    }
+    .left-icon-container {
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       margin-bottom: 0px;
+       margin-right: 32px;
+    }
+    .better-subgrid {
+       grid-template-columns: 373px 373px;
+       grid-auto-rows: 190px;
+       column-gap: 50px;
+       row-gap: 50px;
+    }
+ 
+ }
+ @media screen and (min-width: 1200px) {
+    .better-grid {
+       overflow: visible;
+       flex-direction: row;
+       row-gap: 0px;
+       column-gap: 66px;
+    }
+ }

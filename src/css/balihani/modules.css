@@ -115,6 +115,24 @@
    padding-right: 16px;
    padding-left: 16px;
 }
+.card {
+   color: var(--dark);
+   background-color: rgba(239, 121, 12, 0.05);
+   padding: 20px;
+   border-radius: 10px;
+}
+.card p {
+   line-height: 30px;
+}
+.card--left-icon {
+   text-align: center;
+}
+.left-icon-container {
+   margin-bottom: 32px;
+}
+.left-icon-container__icon {
+   width: 60px;
+}
 .column-grid {
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
