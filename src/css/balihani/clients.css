@@ -1,0 +1,65 @@
+.clients {
+    overflow: hidden;
+}
+.clients-grid {
+    display: grid;
+    grid-template-columns: repeat(9, 380px);
+    column-gap: 50px;
+    row-gap: 50px;
+    overflow: auto;
+    transition: margin 300ms ease-out;
+}
+.clients-grid__user-header {
+    margin-bottom: 21px;
+    height: 49px;
+    display: flex;
+    align-items: center;
+ }
+ .clients-grid__user-bubble {
+    background-color: #DDE0E4;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+ .clients-grid__user-image {
+    width: 100%;
+}
+ .clients-grid__user-name {
+    text-transform: capitalize;
+    height: 40px;
+    margin-left: 19px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+ .clients-grid__review {
+    margin-left: auto;
+}
+ .clients-grid__review-icon {
+    vertical-align: middle;
+}
+ .clients-grid__desc {
+    line-height: 30px;
+}
+.clients-buttons {
+    display: none;
+    margin-top: 41px;
+    column-gap: 15px;
+}
+.clients-buttons__button {
+    text-indent: -9999px;
+    background-color: rgba(239, 121, 12, 0.20);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+@media screen and (min-width: 1240px) {
+    .clients-grid {
+        overflow: hidden;
+    }
+    .clients-buttons {
+        display: flex;
+    }
+}

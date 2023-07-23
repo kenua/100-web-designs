@@ -4,6 +4,10 @@ window.addEventListener('DOMContentLoaded', () => {
    const navbarUl = document.querySelector('#header-nav__ul');
    const navbarBtns = document.querySelectorAll('.header-button');
    const navbarSubLists = document.querySelectorAll('.header-sublist');
+   const clientsGrid = document.querySelector('.clients-grid');
+   const clientsButtons = [...document.querySelectorAll('.clients-buttons__button')];
+
+   let clientsGridWidth = clientsGrid.offsetWidth;
 
    navbarUl.addEventListener('click', e => {
       let target = e.target;
@@ -28,4 +32,15 @@ window.addEventListener('DOMContentLoaded', () => {
          e.preventDefault();
       }
    });
+
+   clientsButtons.forEach((button, i) => 
+      button.addEventListener('click', () => moveComments(i)));
+
+   function moveComments(pos) {
+      if (typeof pos !== 'number' || pos < 0 || pos > 2) {
+         pos = 0;
+      }
+
+      clientsGrid.style.marginLeft = -(clientsGridWidth * pos) + 'px';
+   }
 });
